@@ -267,32 +267,19 @@ button.hero-button {
 
   color: #212121;
 }
-.modal-list {
-  list-style: none;
-  padding-left: 0;
-  margin-bottom: 20px;
-}
-.modal-item {
-  position: relative;
+.modal-form {
   display: flex;
-  flex-direction:column;
+  flex-direction: column;
 }
-
-.modal-item:not(:last-child) {
-  margin-bottom: 10px;
-}
-.modal-icon {
+/* .modal-icon {
   position: absolute;
   top: 30px;
-  left: 15px;
+  left: 12px;
   fill: #212121;
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-.modal-item:hover .modal-icon,
-.modal-item:focus .modal-icon {
-  fill: #2196F3;
-}
+} */
 .modal-label {
+  position: relative;
   font-size: 12px;
   line-height: 1.17;
   letter-spacing: 0.01em;
@@ -301,9 +288,10 @@ button.hero-button {
   margin-bottom: 4px;
 }
 .modal-input {
+  position: relative;
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
-  padding: 11px 42px;
+  padding: 12px 16px 12px 42px;
 
   font-size: 16px;
   line-height: 1.17;
@@ -311,11 +299,29 @@ button.hero-button {
 
   transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
+.modal-input:not(:last-child) {
+  margin-bottom: 10px;
+}
 .modal-input:hover,
 .modal-input:focus {
   border-color: #2196f3;
   outline: 0;
   outline-offset: 0;
+}
+.modal-input::after {
+  content: "";
+  position: absolute;
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  background-image: url(../images/icons.svg/person-modal-icon.svg);
+  fill: #212121;
+
+}
+
+.textarea.modal-input {
+  margin-bottom: 20px;
+  padding: 12px 16px;
 }
 .modal-form textarea {
   height: 120px;
