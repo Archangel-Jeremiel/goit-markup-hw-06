@@ -268,57 +268,62 @@ button.hero-button {
   color: #212121;
 }
 .modal-form {
+  position: relative;
   display: flex;
   flex-direction: column;
 }
-/* .modal-icon {
+.modal-contaner {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.modal-icon {
   position: absolute;
-  top: 30px;
   left: 12px;
   fill: #212121;
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
-} */
+}
+.modal-icon.person {
+  top: 30px;
+}
+.modal-icon.phone {
+  top: 100px;
+}
+.modal-icon.mail {
+  top: 168px;
+}
 .modal-label {
-  position: relative;
   font-size: 12px;
   line-height: 1.17;
   letter-spacing: 0.01em;
 }
-.modal-label:not(:last-child) {
-  margin-bottom: 4px;
-}
 .modal-input {
-  position: relative;
+  margin-top: 4px;
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
-  padding: 12px 16px 12px 42px;
+  padding: 10px 16px 10px 42px;
 
   font-size: 16px;
   line-height: 1.17;
   letter-spacing: 0.01em;
 
+  fill: #212121;
   transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .modal-input:not(:last-child) {
   margin-bottom: 10px;
 }
-.modal-input:hover,
 .modal-input:focus {
-  border-color: #2196f3;
+  border-color: #2196F3;
   outline: 0;
   outline-offset: 0;
 }
-.modal-input::after {
-  content: "";
-  position: absolute;
-  display: inline-block;
-  width: 18px;
-  height: 18px;
-  background-image: url(../images/icons.svg/person-modal-icon.svg);
-  fill: #212121;
-
+.modal-input:focus + .modal-icon.person,
+.modal-input:focus + .modal-icon.phone,
+.modal-input:focus + .modal-icon.mail {
+  fill: #2196f3;
 }
-
 .textarea.modal-input {
   margin-bottom: 20px;
   padding: 12px 16px;
@@ -344,7 +349,6 @@ button.hero-button {
   letter-spacing: 0.03em;
 
   cursor: pointer;
-  transition: background-image 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .checkbox-input{
   position: absolute;
@@ -364,7 +368,7 @@ button.hero-button {
   border: 2px solid #212121;
   border-radius: 2px;
 }
-.checkbox-input:checked + .check-style::after {
+.checkbox-input:focus + .check-style::after {
   content: "";
   position: absolute;
   top: -2px;
@@ -648,6 +652,9 @@ button.hero-button {
   min-width: 206px;
   margin-left: 70px;
 }
+.container-social.subscription {
+  margin-left: 127px;
+}
 .social-title,
 .subscription-title {
   margin-bottom: 20px;
@@ -695,6 +702,12 @@ button.hero-button {
 }
 .subscription-input:not(:placeholder-shown) {
   border-color: rgb(255, 255, 255);
+}
+.subscription-input::placeholder {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.25;
+  letter-spacing: 0.03em;
 }
 .subscription-button {
   display: flex;
