@@ -256,7 +256,7 @@ button.hero-button {
 }
 .closer-modal-button:hover .closer-modal-icon,
 .closer-modal-button:focus .closer-modal-icon {
-  fill: #2196F3;
+  fill: #2196f3;
 }
 .modal-title {
   margin-bottom: 12px;
@@ -315,7 +315,7 @@ button.hero-button {
   margin-bottom: 10px;
 }
 .modal-input:focus {
-  border-color: #2196F3;
+  border-color: #2196f3;
   outline: 0;
   outline-offset: 0;
 }
@@ -350,7 +350,7 @@ button.hero-button {
 
   cursor: pointer;
 }
-.checkbox-input{
+.checkbox-input {
   position: absolute;
   width: 1px;
   height: 1px;
@@ -368,6 +368,7 @@ button.hero-button {
   border: 2px solid #212121;
   border-radius: 2px;
 }
+.checkbox-input:checked + .check-style::after,
 .checkbox-input:focus + .check-style::after {
   content: "";
   position: absolute;
@@ -391,7 +392,7 @@ button.hero-button {
   margin: -1px;
 }
 .modal-link {
-  color: #2196F3;
+  color: #2196f3;
 }
 .modal-send {
   display: flex;
@@ -405,8 +406,8 @@ button.hero-button {
   align-items: center;
 
   cursor: pointer;
-  background: #188CE8;
-  color: #FFFFFF;
+  background: #188ce8;
+  color: #ffffff;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 }
 /* Секция "Подход к работе" */
@@ -680,8 +681,6 @@ button.hero-button {
   display: flex;
   flex-direction: row;
 }
-.subscription-label {
-}
 .subscription-input {
   width: 356px;
   margin-right: 12px;
@@ -692,8 +691,8 @@ button.hero-button {
   border-radius: 4px;
   background-color: transparent;
   color: #ffffff;
-  transition:  border-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-  color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .subscription-input:hover,
 .subscription-input:focus {
